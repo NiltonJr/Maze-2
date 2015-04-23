@@ -75,17 +75,17 @@ command calculateNextCommand()
 		currentCommand = ROTATERIGHT;
 	}
 
-	if (criticalLaserDistance && !criticalSonarDistance)
+	else if (criticalLaserDistance && !criticalSonarDistance)
 	{
 		currentCommand = TURNRIGHT;
 	}
 
-	if (!criticalLaserDistance && !criticalSonarDistance)
+	else if (!criticalLaserDistance && !criticalSonarDistance)
 	{
 		currentCommand = DRIVEFORWARDS;
 	}
 
-	if (!criticalLaserDistance && criticalSonarDistance)
+	else if (!criticalLaserDistance && criticalSonarDistance)
 	{
 		currentCommand = ROTATELEFT;
 	}
