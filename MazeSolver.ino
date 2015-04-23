@@ -67,8 +67,8 @@ command calculateNextCommand()
 	currentSonarDistance = sonarObject.convert_cm(sonarObject.ping_median());
 	currentLaserDistance = laserObject.getLaserDistance();
 
-	criticalSonarDistance = (currentSonarDistance <= 10) ? true : false;
-	criticalLaserDistance = (currentLaserDistance <=  4) ? true : false;
+	criticalSonarDistance = (currentSonarDistance <= 7.5) ? true : false;
+	criticalLaserDistance = (currentLaserDistance <=   3) ? true : false;
 
 	if (criticalLaserDistance && criticalSonarDistance)
 	{
